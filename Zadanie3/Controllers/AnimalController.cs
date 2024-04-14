@@ -63,6 +63,7 @@ using Microsoft.AspNetCore.Mvc;
             command.Parameters.AddWithValue("@Area", animal.Area ?? (object)DBNull.Value); 
 
             connection.Open();
+
             int result = command.ExecuteNonQuery();
 
             if (result < 0)
